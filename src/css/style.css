@@ -1,0 +1,1004 @@
+/* ------------Глобальные настройки------------ */
+
+
+*{
+    box-sizing: border-box; /* Свойства width и height включают в себя значения полей и границ, но не отступов (margin). Эта модель используется браузером Internet Exporer в режиме несовместимости. */
+    margin: 0;
+    padding: 0;
+}
+.container{
+    position: relative; /* для того, чтобы его родительские параметры позволили картинкам выставлять абсолютное позиционирование */
+    width: 1170px; 
+    margin: 0 auto;
+}
+
+
+/* ------------Локальные настройки------------ */
+
+/* ------------------HEADER------------------  */
+
+
+.head{
+    height: 779px; /* cover - растягивает маленькую картинку под рамер экрана*/
+    background: url("../img/head/head_background.png") center center/cover no-repeat; /* center/cover - необходимая запись при двойном указании позиции */
+    /* background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    padding: 20px 0px 70px 0px;
+}
+
+
+
+.logo{
+    display: inline-block;
+}
+.logo .logo_img{
+    display: inherit;
+    max-width: 40px;
+    height: auto; 
+    font-family: 'Open Sans', sans-serif;   
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);
+}
+.logo .logo_img:hover{
+    cursor: pointer;
+}
+.logo .logo_text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 3px;
+    text-align: left;
+    color: rgba(255, 123, 0, 0.376);     
+}
+
+
+
+.head_menu{
+    display: inline-block;
+    padding-left: 228px;
+}
+.head_menu li{
+   display: inline-block;
+   list-style-type: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 20px;
+   font-weight: 600;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: 1.1;
+   letter-spacing: 1px;
+   padding-right: 14px;   
+}
+.head_menu a{
+    color: rgba(255, 123, 0, 0.376);
+    text-decoration: none;     
+}
+.head_menu a:hover{
+    color: rgba(255, 123, 0, 0.938);
+    text-decoration: underline; 
+    cursor: pointer;    
+}
+
+
+
+.search-box{
+    display: inline-block;
+    border: 2px solid rgba(255, 123, 0, 0.376);
+    border-radius: 6px;   
+}
+.search-box:hover{
+    opacity: 1.0;
+    border: 2px solid rgba(255, 123, 0, 0.938);
+}
+.search-box .search-text{
+    width: 90%;
+	height: 25px;
+	background: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+	color: rgba(255, 123, 0, 0.938);
+	font-size: calc(14px + 4 * (100vw / 2000)); 
+    font-weight: 500;
+	float: left;	
+	opacity: 0.4;
+    outline:none;	/* убирает обводку при наведении и клике на область input*/
+}
+.search-box .search-text:hover{
+    height: 25px;
+	background: none;
+    border: none;	
+	color: rgba(255, 123, 0, 0.938);	
+	font-size: calc(14px + 4 * (100vw / 2000));	
+	float: left;	
+	opacity: 1.0;
+}
+.search-box .search-button{  
+    display: flex;	
+	position: relative;
+	left: 2px;
+	top: 4px; 
+    opacity: 0.4;   	
+}
+.search-box .search-button:hover{      
+    display: flex; 
+	position: relative;	
+	top: 4px;
+    opacity: 1.0;	
+}
+
+
+
+.title{
+    margin: 205px auto 0px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;    
+    letter-spacing: 3px;
+    text-align: center;
+    color: #fff;
+}
+.title_small{
+    margin: 26px auto 0px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;    
+    letter-spacing: 1.1px;
+    text-align: center;
+    color: #fff;
+}
+
+.head_btn_wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 108px auto 0 auto;
+}
+.head .left_btn{        
+    width: 220px;
+    height: 70px;
+    margin: 0px 12px 0px 12px;       
+    border: solid 3px rgba(248, 248, 248, 0.356);
+    background-color: rgba(248, 248, 248, 0);
+    color: rgba(255, 255, 255, 0.651);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.head .left_btn:hover{    
+    background-image: linear-gradient(to top, rgba(0, 137, 123, 0.747), rgba(0, 255, 229, 0.747));
+    border: solid 3px rgba(0, 137, 123, 0.747);
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.18); /* работа с тенью кнопки*/
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.22); /* работа с тенью текста*/
+    cursor: pointer; /* меняет указатель мыши на пальчик*/
+    outline:none;
+}
+.head .right_btn{     
+    width: 220px;
+    height: 70px;
+    margin: 0px 12px 0px 12px;     
+    border: solid 3px rgba(248, 248, 248, 0.356);
+    background-color: rgba(248, 248, 248, 0);
+    color: rgba(255, 255, 255, 0.651);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.head .right_btn:hover{       
+    background-image: linear-gradient(to top, rgba(0, 137, 123, 0.747), rgba(0, 255, 229, 0.747));
+    border: solid 3px rgba(0, 137, 123, 0.747);
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.18); /* работа с тенью кнопки*/
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.22); /* работа с тенью текста*/
+    cursor: pointer;
+    outline:none;
+}
+.head .arrow_down{
+    display: block;
+    margin: 100px auto 0px auto;  /* margin - применяется только к блочным элеентам */  
+    opacity: 0.45;    
+}
+
+/* -----------------ABOUT US-----------------  */
+
+.about_us{
+    min-height: 672px;
+    background-color: #ffffff;
+    padding: 125px 0px 0px 0px;
+}
+.about_us .about_us_header, .our_services .our_services_header, .latest_works .latest_works_header, .pricing_plan .pricing_plan_header, .our_team .our_team_header, .blog .blog_header, .contact_us .contact_us_header{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.73;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #212121;
+}
+.about_us .about_us_divider, .our_services .our_services_divider, .latest_works .latest_works_divider, .pricing_plan .pricing_plan_divider, .our_team .our_team_divider, .blog .blog_divider, .contact_us .contact_us_divider{
+    width: 217px;
+    height: 4px;
+    margin: 16px auto 0 auto;
+    background-color: rgba(255, 123, 0, 0.376);
+}
+.about_us .about_us_subheader, .our_services .our_services_subheader, .latest_works .latest_works_subheader, .pricing_plan .pricing_plan_subheader, .our_team .our_team_subheader, .blog .blog_subheader, .contact_us .contact_us_subheader{
+    width: 620px;
+    margin: 12px auto 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.75px;
+    text-align: center;
+    color: #212121;      
+}
+.about_us .about_us_wrapper{
+    display: flex; /* свойство выравнивания элементов */
+    justify-content: space-between; /* выравнивание по краям элементов с равными промежутками между ними */
+    margin: 112px auto 0 auto;
+    min-height: 338px;    
+}
+.about_us .about_us_wrapper .about_us_item{
+    /* display: inline-block;  - весто будем оиспользовать FLEX */   
+    width: 370px;
+    min-height: 338px;
+    text-align: center; /* все текстовые элементы, что внутри - выравниваются по центру */
+    /* height: 338px; - высоту не добавляем, так как возможно увеличение текста */
+    /* vertical-align: top;  - для выравнивания по верхнему краю элементов*/    
+}
+.about_us .about_us_wrapper .about_us_item:hover{    
+    background-color: rgba(255, 123, 0, 0.376);
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.about_us .about_us_wrapper .about_us_item .about_us_img {
+    margin: 12px auto 0 auto;
+    /*width: 100%; - 100% от родителя */
+}
+.about_us .about_us_wrapper .about_us_item .about_us_subheader2{
+    margin: 41px auto 0 auto;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.about_us .about_us_wrapper .about_us_item .about_us_description{
+    margin: 21px auto 0 auto;
+    padding: 0 35px 0 35px;
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.75px;
+    text-align: center;
+    color: #212121;
+}
+
+/* ----------------OPTIMIZATION----------------  */
+
+.optimization{
+    min-height: 570px;
+    padding: 102px 0 0 0;
+}
+.optimization .optimization_header{
+    margin-left: 391px;
+    color: #299cbd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;    
+    text-transform: uppercase;
+}
+.optimization .optimization_text{    
+    margin-top: 25px;
+    margin-left: 391px;
+    padding: 0 0 107px 0;
+    color: #4a4a4a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+}
+.optimization .optimization_text span{
+    font-weight: 700;
+}
+.optimization .optimization_img{
+    position: absolute;
+    top: -34px;
+    left: -240px;
+    z-index: -1; /* вывел текст на первый план при наложении объектов */
+}
+
+/* ----------------OUR SERVICES----------------  */
+
+.our_services{
+    min-height: 1414px;
+    background-color: rgb(228, 253, 249);
+    padding: 173px 0px 126px 0px;
+}
+.our_services .our_services_wrapper{
+    display: flex; /* свойство выравнивания элементов */
+    flex-wrap: wrap; /* выстраивает элементы в несколько строк */
+    justify-content: space-between; /* выравнивание по краям элементов с равными промежутками между ними на главной оси*/
+    align-content: space-between;  /* выравнивание по краям элементов с равными промежутками между ними на поперечной оси*/
+    margin: 112px auto 0 auto;
+    height: 905px;    
+}
+.our_services .our_services_wrapper .our_services_item{
+    /* display: inline-block;  - весто будем оиспользовать FLEX */       
+    width: 370px;
+    min-height: 438px;
+    text-align: center; /* все текстовые элементы, что внутри - выравниваются по центру */
+    /* height: 338px; - высоту не добавляем, так как возможно увеличение текста */
+    /* vertical-align: top;  - для выравнивания по верхнему краю элементов*/    
+    background-color: #ffffff;
+}
+.our_services .our_services_wrapper .our_services_item:hover{    
+    background-color: rgba(0, 137, 123, 0.74);
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.our_services .our_services_wrapper .our_services_item .our_services_img{
+    margin: 58px auto 0 auto;
+    /*width: 100%; - 100% от родителя */
+}
+.our_services .our_services_wrapper .our_services_item .our_services_subheader2{
+    margin: 30px auto 0 auto;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.our_services .our_services_wrapper .our_services_item .our_services_description{
+    margin: 26px auto 0 auto;
+    padding: 0 35px 0 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.75px;
+    text-align: center;
+    color: #212121;
+}
+.our_services .our_services_wrapper .our_services_item .our_services_center_btn{
+    width: 150px;
+    height: 56px;
+    margin: 44px auto 0 auto;   
+    border: solid 2px #212121;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.our_services .our_services_wrapper .our_services_item .our_services_center_btn:hover{
+    cursor: pointer;
+    border: solid 2px #ffffff;
+    color: #ffffff;
+}
+
+/* ----------------LATEST WORKS----------------  */
+
+.latest_works{
+    min-height: 1616px;
+    background-color: #ffffff;
+    padding: 128px 0px 136px 0px;
+}
+.latest_works_btn_wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 112px;
+}
+.latest_works .latest_works_btn{
+    display: inline-block;
+    width: 179px;
+    height: 55px;
+    margin: 0px 8px 0px 8px;
+    border: solid 2px rgba(0, 137, 123, 0.993);
+    background-color: rgba(0, 137, 123, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.latest_works .latest_works_btn:hover{    
+    border: solid 2px #00897b;
+    background-color: #00897b;
+    color: #ffffff;  
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);  
+    cursor: pointer;
+}
+.latest_works .latest_works_wrapper{
+    display: flex; /* свойство выравнивания элементов */
+    flex-wrap: wrap; /* выстраивает элементы в несколько строк */
+    justify-content: space-between; /* выравнивание по краям элементов с равными промежутками между ними на главной оси*/
+    align-content: space-between;  /* выравнивание по краям элементов с равными промежутками между ними на поперечной оси*/
+    margin: 119px auto 0 auto;
+    min-height: 769px;    
+}
+.latest_works .latest_works_wrapper .latest_works_item{
+    /* display: inline-block;  - весто будем оиспользовать FLEX */       
+    width: 370px;
+    height: 370px;
+    text-align: center; /* все текстовые элементы, что внутри - выравниваются по центру */
+    /* height: 338px; - высоту не добавляем, так как возможно увеличение текста */
+    /* vertical-align: top;  - для выравнивания по верхнему краю элементов*/    
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);
+}
+.latest_works .latest_works_center_btn{
+    display: block;
+    width: 220px;
+    height: 70px;  
+    margin: 129px auto 0px auto;
+    border: solid 2px rgba(0, 137, 123, 0.993);
+    background-color: rgba(0, 137, 123, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.latest_works .latest_works_center_btn:hover{    
+    border: solid 2px #00897b;
+    background-color: #00897b;
+    color: #ffffff;  
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35); 
+    cursor: pointer; 
+}
+   
+/* -----------------PRICING PLAN-----------------  */
+
+
+.pricing_plan{
+    min-height: 1142px;
+    /* opacity: 0.3; - общая прозрачность всего блока*/ 
+    background-color: rgba(6, 12, 11, 0.301);
+    padding: 127px 0px 125px 0px;
+}
+.pricing_plan .pricing_plan_wrapper{
+    display: flex; /* свойство выравнивания элементов */
+    justify-content: space-between; /* выравнивание по краям элементов с равными промежутками между ними */
+    margin: 125px auto 0 auto;
+    min-height: 667px;    
+}
+.pricing_plan .pricing_plan_wrapper .pricing_plan_item{ 
+    width: 370px;
+    min-height: 667px;
+    padding: 49px 95px 63px 95px;
+    text-align: center; 
+    background-color: rgb(255, 255, 255);
+    background-image: url(../img/pricing_plan/Rectangle_14.png);
+    background-repeat: no-repeat;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);   
+}
+.pricing_plan .pricing_plan_wrapper .pricing_plan_item .pricing_plan_subheader3{
+    margin: 0 auto;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.88;
+    letter-spacing: 1.25px;
+    text-align: center;
+    color: #ffffff;
+}
+.pricing_plan .pricing_plan_wrapper .pricing_plan_S{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.88;
+    letter-spacing: 1.25px;
+    text-align: center;
+    color: #fff;
+}
+.pricing_plan .pricing_plan_wrapper .pricing_plan_price{
+    display: inline-block;
+    margin-top: 39px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 0.85px;
+    text-align: center;
+    color: #fff;
+}
+.pricing_plan .pricing_plan_wrapper .pricing_plan_price span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.44;
+    letter-spacing: 2.5px;
+    text-align: center;
+    color: #fff;
+}
+.pricing_plan .pricing_plan_wrapper .pricing_plan_item .pricing_plan_description1{
+    display: block;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.507);
+    margin: 100px auto 0 auto;
+    padding: 0 0 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 0.85px;
+    text-align: center;
+    color: #212121;
+}
+.pricing_plan .pricing_plan_wrapper .pricing_plan_item .pricing_plan_description2, .pricing_plan .pricing_plan_wrapper .pricing_plan_item .pricing_plan_description3, .pricing_plan .pricing_plan_wrapper .pricing_plan_item .pricing_plan_description4{
+    display: block;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.507);
+    margin: 32px auto 0 auto;
+    padding: 0 0 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 0.85px;
+    text-align: center;
+    color: #212121;
+}
+.pricing_plan .pricing_plan_center_btn{
+    display: block;
+    width: 180px;
+    height: 60px;  
+    margin: 66px auto 0px auto;
+    border: solid 2px rgba(0, 137, 123, 0.993);
+    background-color: rgba(0, 137, 123, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.pricing_plan .pricing_plan_center_btn:hover{    
+    border: solid 2px #00897b;
+    background-color: #00897b;
+    color: #ffffff;  
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35); 
+    cursor: pointer; 
+}
+    
+
+/* ---------------Our Team Member---------------  */
+
+
+.our_team{
+    min-height: 1095px;   
+    background-color: #fff;
+    padding: 120px 0px 120px 0px; 
+}
+.our_team .our_team_wrapper{
+    display: flex; /* свойство выравнивания элементов */
+    justify-content: space-between; /* выравнивание по краям элементов с равными промежутками между ними */
+    margin: 106px auto 0 auto;
+    min-height: 338px;    
+}
+.our_team .our_team_wrapper .our_team_item{     
+    width: 370px;
+    min-height: 320px;
+    text-align: center;     
+}
+.our_team .our_team_wrapper .our_team_item .our_team_img {        
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);    
+    /*width: 100%; - 100% от родителя */
+}
+.our_team .our_team_wrapper .our_team_item .our_team_subheader2{
+    margin: 41px auto 0 auto;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.our_team .our_team_wrapper .our_team_item .our_team_description{
+    margin: 21px auto 0 auto;
+    padding: 0 35px 0 35px;
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.75px;
+    text-align: center;
+    color: #212121;
+}
+.our_team .our_team_wrapper .our_team_item .our_team_inner_wrapper{
+    margin: 29px auto 0 auto;
+    max-width: 270px;    
+    display: flex;
+    justify-content: space-between;        
+}
+.our_team .our_team_wrapper .our_team_item .our_team_inner_wrapper .our_team_square{ 
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;    
+    background-color: #f0f1f1;
+    display: flex; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    justify-content: center; /* очень удобно разом выравнивать элементы иконок внутри блоков бех отступов */
+    align-items: center;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+.our_team .our_team_wrapper .our_team_item .our_team_inner_wrapper .our_team_square:hover{
+    background-color: #3949ab;
+    cursor: pointer;
+}
+.our_team .our_team_wrapper .our_team_item .our_team_square .our_team_icon_fb{
+    width: 15px;
+    height: 28px;    
+}
+.our_team .our_team_wrapper .our_team_item .our_team_square .our_team_icon_tw{
+    width: 27px;
+    height: 22px;    
+}
+.our_team .our_team_wrapper .our_team_item .our_team_square .our_team_icon_chat{
+    width: 30px;
+    height: 25px;    
+}
+.our_team .our_team_wrapper .our_team_item .our_team_square .our_team_icon_dribble{
+    width: 26px;
+    height: 27px;    
+}
+.our_team_ellipse_wrapper{
+    margin: 126px auto 0 auto;
+    max-width: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+.our_team_ellipse_wrapper .our_team_ellipse_1, .our_team_ellipse_wrapper .our_team_ellipse_2, .our_team_ellipse_wrapper .our_team_ellipse_3{
+    width: 15px;
+    height: 15px;  
+    background-color: #00897b;
+    border-radius: 8px;
+}
+.our_team_ellipse_wrapper .our_team_ellipse_1:hover, .our_team_ellipse_wrapper .our_team_ellipse_2:hover, .our_team_ellipse_wrapper .our_team_ellipse_3:hover{
+    background-color: #3949ab;
+    cursor: pointer;
+}
+
+
+/* ---------------------Blog---------------------  */
+
+
+.blog{
+    min-height: 1869px;   
+    background-color: rgb(228, 253, 249);
+    padding: 124px 0px 124px 0px; 
+}
+.blog .blog_wrapper{
+    display: flex; /* свойство выравнивания элементов */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-content: space-between; */ /* выравнивание по краям элементов с равными промежутками между ними */
+    margin: 117px auto 0 auto;
+    min-height: 1202px;    
+}
+.blog .blog_wrapper .blog_item{     
+    width: 570px;
+    min-height: 400px;
+    /* text-align: left;      */
+}
+.blog .blog_wrapper .blog_item .blog_img {
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);    
+    /*width: 100%; - 100% от родителя */
+}
+.blog .blog_wrapper .blog_item .blog_subheader2{
+    margin: 61px auto 0 auto;    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.88;
+    letter-spacing: 1.25px;
+    text-align: left;
+    color: rgb(0, 137, 123);
+}
+.blog .blog_wrapper .blog_item .blog_basket_img{
+    display: inline-block;
+    width: 17px;
+    height: 18px;
+    margin: 26px 15px 0 auto;
+    color: #212121;
+}
+.blog .blog_wrapper .blog_item .blog_article_number{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 0.85px;
+    text-align: left;
+    color: #212121;
+}
+.blog .blog_wrapper .blog_item .blog_note_img{
+    display: inline-block;
+    width: 15px;
+    height: 18px;
+    margin: 26px 15px 0 40px;
+}
+.blog .blog_wrapper .blog_item .blog_development{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: 0.85px;
+    text-align: left;
+    color: #212121;
+}
+.blog .blog_wrapper .blog_item .blog_description{
+    margin: 21px auto 0 auto;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.75px;
+    text-align: left;
+    color: #212121;
+}
+.blog .blog_center_btn{
+    display: block;
+    width: 220px;
+    height: 70px;  
+    margin: 124px auto 0px auto;
+    border: solid 2px rgba(0, 137, 123, 0.993);
+    background-color: rgba(0, 137, 123, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.blog .blog_center_btn:hover{    
+    border: solid 2px #00897b;
+    background-color: #00897b;
+    color: #ffffff;  
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.35);  
+    cursor: pointer;
+}
+
+
+/* ------------------Contact Us------------------  */
+
+
+.contact_us{
+    min-height: 1254px; 
+    background: url("../img/contact_us/background_5.png") center center / cover no-repeat;
+    /* background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    padding: 128px 0px 110px 0px; 
+}
+.contact_us .contact_us_header{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.73;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #ffffff;
+}
+.contact_us .contact_us_divider{
+    width: 217px;
+    height: 4px;
+    margin: 16px auto 0 auto;
+    background-color: rgba(255, 123, 0, 0.376);
+}
+.contact_us .contact_us_subheader{
+    width: 620px;
+    margin: 12px auto 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.75px;
+    text-align: center;
+    color: #ffffff;      
+}
+.contact_us .contact_us_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 101px auto 0 auto;
+    /* max-width: 1030px; */
+}
+.contact_us .contact_us_wrapper .contact_us_item{
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact_us .contact_us_wrapper .contact_us_item .contact_us_ellipse{
+    width: 105px;
+    height: 105px;
+    background-color: #3949ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+}
+.contact_us .contact_us_wrapper .contact_us_item .contact_us_description{    
+    margin: 40px auto 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #fff;
+}
+.contact_us .contact_us_web_form {
+    margin: 84px auto 0 auto;
+}
+.contact_us .contact_us_web_form .contact_us_web_form_wrapper{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-content: space-between;
+    /* align-items: stretch; */
+    flex-wrap: wrap; 
+    width: 1030px;
+    height: 550px;
+    margin: 0 auto;
+    
+}
+.contact_us .contact_us_web_form .contact_us_web_form_wrapper .contact_us_name, .contact_us .contact_us_web_form .contact_us_web_form_wrapper .contact_us_email{
+    width: 500px;
+    height: 84px; 
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-align: left;
+    color: rgba(33, 33, 33, 0.8);
+    padding: 5px 5px;
+}
+.contact_us .contact_us_web_form .contact_us_web_form_wrapper .contact_us_textarea{
+    width: 1030px;
+    height: 323px;
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-align: left;
+    color: rgba(33, 33, 33, 0.8);
+    padding: 5px 5px;
+    resize: none; /*запрещает масштабировние области текста!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+.contact_us .contact_us_web_form .contact_us_web_form_wrapper .contact_us_btn{
+    width: 220px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #fff;
+    align-items: flex-end ;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #212121;
+}
+.contact_us .contact_us_web_form .contact_us_web_form_wrapper .contact_us_btn:hover{
+   background-color: rgba(255, 123, 0, 0.376);
+   color: #ffffff;
+}
+
+
+
+/* ------------------Footer------------------  */
+
+
+footer{
+    min-height: 64px;  
+    padding: 22px 0 22px 0;
+    background-color: rgba(0, 0, 0, 0.918);
+}
+.rights{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1.85px;
+    text-align: center;      
+    color: rgba(255, 123, 0, 0.376);   
+}
